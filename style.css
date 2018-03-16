@@ -1,0 +1,28 @@
+
+body {
+  font-family: 'Playfair+Display', sans-serif;
+  /* color: rgb() */
+  /* background-color:  */
+}
+
+.site-container {
+
+}
+
+nav {
+  height: 10vh;
+  border-bottom: 2px solid rgba(236, 236, 236, 0.5);
+  /* box-shadow: rgba(236, 236, 236, 0.5) */
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  justify-content: space-around;
+}
+
+.profile-picture {
+  border-radius: 50%;
+  float: left;
+  margin-right: 50px;
+}
