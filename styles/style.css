@@ -15,14 +15,14 @@ body {
 } */
 
 .top-site {
-  background-image: url("caged-bird.jpg");
+  background-image: url("images/caged-bird.jpg");
   background-color: #cccccc;
   background-size: cover;
   position: relative;
 }
 
 
-.top-site::after {
+/* .top-site::after {
   content: "";
   background: url(caged-bird.jpg);
   opacity: 0.5;
@@ -32,10 +32,10 @@ body {
   right: 0;
   position: absolute;
   z-index: -1;
-}
+} */
 
-.header {
-  margin: 100px auto;
+.intro {
+  /* margin: 100px auto; */
   height: 150px;
   padding: 100px;
   display: flex;
@@ -44,17 +44,23 @@ body {
   align-content: center;
 }
 
-
-.header h1 {
+.intro h1 {
   justify-content: center;
   flex-direction: column;
-  font-size: 4em;
+  font-size: 3em;
   text-align: center;
   align-items: center;
   align-content: center;
 }
 
-.header > p {
+.summary {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: auto;
+}
+
+.intro > p {
   display: flex;
   flex-direction: column;
   align-items: center;
