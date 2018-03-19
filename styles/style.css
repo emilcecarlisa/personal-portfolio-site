@@ -8,7 +8,6 @@ body {
   /* font-family: 'Homemade Apple', cursive; */
   font-family: "alternate-gothic-no-2-d", sans-serif;
   align-content: center;
-  display: flex;
   color: white;
   background-color: teal;
   text-transform: uppercase;
@@ -38,13 +37,12 @@ body {
 } */
 
 nav {
-  font-size: 2rem;
+  font-size: 1.5em;
   height: 60px;
   width: 100;
   top: 0;
   list-style-type: none;
 }
-
 
 nav ul {
   display: grid;
@@ -69,10 +67,7 @@ footer {
 
 /*--------------Index(Splash Page)-------------  */
 
-
 .site-container {
-  flex-direction: column;
-  justify-content: center;
   width: 100%;
   height: 100%;
   min-width: 1000px;
@@ -91,7 +86,6 @@ footer {
 }
 
 .intro {
-  /* margin: 100px auto; */
   height: 130px;
   padding: 85px;
   display: flex;
@@ -114,10 +108,12 @@ footer {
   flex-direction: row;
   align-items: center;
   margin: auto;
+  text-transform: capitalize;
 }
 
-.summary p {
+.intro .summary > p {
   padding: 10px;
+  text-transform: capitalize;
 }
 
 .intro > p {
@@ -136,7 +132,6 @@ footer {
 
 .menu-buttons li:hover {
   animation: shake 0.5s;
-  /* When the animation is finished, start again */
   animation-iteration-count: infinite;
 }
 
@@ -247,6 +242,7 @@ object-fit: cover;
   grid-template-rows: fr fr fr fr;
   height: 110vh;
   width: 100vw;
+  padding: 100px 0 0 0;
 }
 
 .first-small {
@@ -298,10 +294,39 @@ object-fit: cover;
 }
 
 /* --------------About------------- */
-.about-container {
-  margin: 0 65px 0 65px;
+
+/* .site-container {
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  min-height: 1000px;
 }
 
+.site-container > section {
+   height: 50vh;
+} */
+
+.about-container {
+  width: 100%;
+  height: 100%;
+  min-width: 1000px;
+  min-height: 1000px;
+}
+
+.about-container > section {
+  /* margin: 0 65px 0 65px; */
+  height: 50vh;
+}
+
+.about-container > article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  padding: 120px 60px 0 60px;
+}
 
 .interest-people {
   text-transform: none;
