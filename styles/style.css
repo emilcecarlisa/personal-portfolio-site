@@ -200,7 +200,8 @@ span {
 /* --------------Portfolio------------- */
 .portfolio-container {
   /* padding: 0 60px 0 60px 0; */
-  height: 50vh;
+  height: 300vh;
+  width: auto;
 }
 
 /* .small-boxes > section {
@@ -238,11 +239,11 @@ object-fit: cover;
 
 .image-grid {
   display: grid;
-  grid-template-columns: 40px fr fr 40px;
-  grid-template-rows: fr fr fr fr;
-  height: 110vh;
-  width: 100vw;
-  padding: 100px 0 0 0;
+  grid-template-columns: fr 85px 85px 85px 85px 85px fr;
+  grid-template-rows: repeat{6,fr};
+  height: 40%;
+  width: 100%;
+  padding: 100px 100px 0 100px;
 }
 
 .first-small {
@@ -250,9 +251,9 @@ object-fit: cover;
   background-repeat: no-repeat;
   object-fit: cover;
   grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-end: 4;
   grid-row: 1 / span 4;
-  justify-content: center;
+  /* justify-content: center; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -264,8 +265,8 @@ object-fit: cover;
   background-size: contain;
   background-repeat: no-repeat;
   object-fit: cover;
-  grid-column-start: 3;
-  grid-column-end: 4;
+  grid-column-start: 4;
+  grid-column-end: 6;
   grid-row: 1 / span 4;
   display: flex;
   flex-direction: column;
@@ -277,12 +278,19 @@ object-fit: cover;
 .big-box {
   background-size: contain;
   background-repeat: no-repeat;
-  object-fit: contain;
-  grid-column: 1 / span 3;
-  grid-row: 4;
+  object-fit: ;
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 4 / 6;
+  display: flex;
   flex-wrap: wrap;
-  justify-content: flex-start;
-  align-content: flex-start;
+  flex-direction: row;
+  /* justify-items: stretch; */
+  /* justify-content: flex-end;
+  align-content: flex-start; */
+  flex-shrink: 1;
+  align-self: stretch;
+
 }
 
 .first-small > p {
