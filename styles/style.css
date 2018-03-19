@@ -4,27 +4,6 @@ html, body {
   height: 100%;
 }
 
-.nav-bar {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  font-size: 9px;
-  padding-bottom: 30px;
-}
-
-.about {
-  margin-right: 20em;
-  flex-wrap: nowrap;
-}
-
-.portfolio {
-  margin-right: 4em;
-}
-
-.blog {
-  margin-right: 4em;
-}
-
 body {
   /* font-family: 'Homemade Apple', cursive; */
   font-family: "alternate-gothic-no-2-d", sans-serif;
@@ -37,7 +16,54 @@ body {
   min-height: 2000px;
 }
 
-.main {
+/* .nav-bar {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  font-size: 9px;
+  padding-bottom: 30px;
+} */
+
+/* .about {
+  margin-right: 20em;
+  flex-wrap: nowrap;
+}
+
+.portfolio {
+  margin-right: 4em;
+}
+
+.blog {
+  margin-right: 4em;
+} */
+
+nav {
+  font-size: 2rem;
+  height: 60px;
+  width: 100;
+  top: 0;
+}
+
+nav ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr))
+}
+
+h2, h3 {
+  text-align: left;
+  text-transform: capitalize;
+}
+
+footer {
+  font-size: 15px;
+  text-align: center;
+}
+
+
+/*--------------Index(Splash Page)-------------  */
+
+
+.site-container {
   flex-direction: column;
   justify-content: center;
   width: 100%;
@@ -53,7 +79,7 @@ body {
 .top-site {
   background-image: url("images/caged-bird.jpg");
   background-color: #cccccc;
-  background-size: cover;
+  background-size: cover;y
   position: relative;
 }
 
@@ -70,7 +96,7 @@ body {
 .intro h1 {
   justify-content: center;
   flex-direction: column;
-  font-size: 3em;
+  font-size: 3rem;
   text-align: center;
   align-items: center;
   align-content: center;
@@ -169,15 +195,6 @@ span {
   align-items: center;
 }
 
-
-/* .menu-buttons li p {
-position: inline-block;
-} */
-/* .menu-buttons li:nth-child(1) {
-width: auto;
-background-color: grey;
-} */
-
 /* --------------Portfolio------------- */
 .portfolio-container {
   /* padding: 0 60px 0 60px 0; */
@@ -217,32 +234,60 @@ background-repeat: no-repeat;
 object-fit: cover;
 } */
 
-.small-box-grid {
+.image-grid {
   display: grid;
-  grid-template-columns: auto 50% 50% auto;
-  grid-template-rows: fr fr fr 2fr;
-  height: 100vh;
+  grid-template-columns: 40px fr fr 40px;
+  grid-template-rows: fr fr fr fr;
+  height: 110vh;
   width: 100vw;
 }
 
 .first-small {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   object-fit: cover;
-  grid-column: 1 / span 2;
-  grid-row: 1 / span 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1 / span 4;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .second-small {
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
-  grid-column: 3 / span 3;
-  grid-row: 1 / span 3;
-  align-self: stretch;
+  object-fit: cover;
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row: 1 / span 4;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
 }
 
 .big-box {
+  background-size: contain;
+  background-repeat: no-repeat;
+  object-fit: contain;
+  grid-column: 1 / span 3;
+  grid-row: 4;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
 
+.first-small > p {
+  flex-shrink: 1;
+}
+
+.second-small > p {
+  flex-shrink: 1;
 }
 
 /* --------------About------------- */
@@ -250,10 +295,6 @@ object-fit: cover;
   margin: 0 65px 0 65px;
 }
 
-h2 {
-  text-align: left;
-  text-transform: capitalize;
-}
 
 .interest-people {
   text-transform: none;
