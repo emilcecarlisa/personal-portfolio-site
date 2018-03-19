@@ -237,6 +237,10 @@ background-repeat: no-repeat;
 object-fit: cover;
 } */
 
+.image-grid > h2, p, a {
+  padding: 0 1fr 0 1fr;
+}
+
 .image-grid {
   display: grid;
   grid-template-columns: fr 85px 85px 85px 85px 85px fr;
@@ -284,13 +288,9 @@ object-fit: cover;
   grid-row: 4 / 6;
   display: flex;
   flex-wrap: wrap;
-  flex-direction: row;
-  /* justify-items: stretch; */
-  /* justify-content: flex-end;
-  align-content: flex-start; */
+  flex-direction: column;
+  align-content: flex-start;
   flex-shrink: 1;
-  align-self: stretch;
-
 }
 
 .first-small > p {
